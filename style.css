@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-primary: #FFFFFF;
+    --text-secondary: #BAB7D4;
+    --text-placeholder: #3D3B48;
+    --text-accent: #FF7979;
+    --banner: #5E54A4;
+    --focus: #5E54A4;
+    --btn-form: #38CC8B;
+    --btn-hover: #77E2B3;
+    --bg-main: #FF7979;
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('./images/bg-intro-mobile.png') #FF7979;
+    padding: 4rem 0;
+}
+
+.intro-component {
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.intro-content {
+    padding: 0 1.5rem;
+}
+
+.intro-content h1 {
+    font-size: 1.9rem;
+    line-height: 1.4;
+    margin-bottom: 1.6rem;
+    padding: 0 2.2rem;
+}
+
+.intro-content p {
+    margin-bottom: 2.5rem;
+}
+
+.intro-form {
+    padding: 0 1.5rem;
+}
+
+.intro-form h3 {
+    background-color: var(--banner);
+    padding: 1.2rem 3rem;
+    font-size: .95rem;
+    border-radius: .5rem;
+    margin-bottom: 1.75rem;
+    font-weight: 400;
+}
+
+h3 span {
+    font-weight: 700;
+}
+
+.intro-form form {
+    background-color: #FFFFFF;
+    border-radius: .5rem;
+    padding: 1.5rem;
+}
+
+.intro-form .input-warn {
+    margin-bottom: 1rem;
+}
+
+.intro-form form input {
+    display: block;
+    width: 100%;
+    padding: 1.2rem;
+    margin: auto;
+    border: solid 1px #DEDEDE;
+    border-radius: .25rem;
+    /* background: url('./images/icon-error.svg') no-repeat center right 1.56rem; */
+    transition: background .3s;
+}
+
+.warning {
+    color: var(--text-accent);
+    text-align: right;
+    font-size: .69rem;
+    margin-top: .3rem;
+    display: none;
+}
+
+
+.intro-form form input::placeholder {
+    color: #3D3B48;
+    font-weight: 600;
+    font-size: .88rem;
+    opacity: .7;
+}
+
+.invalid-placeholder:invalid::placeholder {
+    color: red;
+}
+
+.intro-form form input:focus {
+    border: solid var(--focus) 1px;
+    outline: #5E54A4;
+
+}
+
+.intro-form form button {
+    width: 100%;
+    display: block;
+    background-color: #38CC8B;
+    color: #FFFFFF;
+    border: none;
+    padding: 1.3rem 1rem;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    transition: .4s opacity;
+    font-weight: 700;
+}
+
+.intro-form form button:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+#terms-conditions {
+    color: #BAB7D4;
+    font-size: .69rem;
+    line-height: 1.8;
+    margin-top: .75rem;
+}
+
+#terms-conditions span {
+    color: var(--text-accent);
+
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 0 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .intro-component {
+        display: flex;
+        max-width: 80rem;
+    }
+
+    .intro-content {
+        width: 50%;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .intro-content h1 {
+        padding: 0;
+        font-size: 3.125rem;
+    }
+
+    .intro-content p {
+        padding-right: 1.5rem;
+    }
+
+    .intro-form {
+        width: 50%;
+    }
+
+    .intro-form form {
+        padding: 2.5rem 2.25rem;
+    }
+
+    #terms-conditions {
+        margin-bottom: 1rem;
+    }
+}
